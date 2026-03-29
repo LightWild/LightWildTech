@@ -250,20 +250,20 @@ a:hover {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: flex-end; /* 图片底部对齐 */
-    padding-bottom: 0;
+    align-items: center;
+    padding-bottom: 10px;
     overflow: hidden;
 }
 
 .card-image {
-    max-width: 85%; /* 限制图片宽度 */
+    max-width: 95%;
     height: auto;
-    max-height: 90%; /* 限制图片高度 */
+    max-height: 95%;
     object-fit: contain;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    box-shadow: 0 -10px 40px rgba(0,0,0,0.1); /* 添加阴影提升层次感 */
-    transform: translateY(20px); /* 稍微下移，营造沉浸感 */
+    box-shadow: 0 -6px 24px rgba(0,0,0,0.08);
+    transform: none;
 }
 
 
@@ -360,6 +360,74 @@ a:hover {
     color: #86868b;
 }
 
+/* Legal / Privacy Page */
+.legal-page {
+    background-color: #ffffff;
+    padding: 40px 0 60px;
+}
+
+.legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.legal-title {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.legal-section h2 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-primary);
+    border-left: 4px solid #000;
+    padding-left: 10px;
+    margin: 30px 0 15px;
+}
+
+.legal-section h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 25px 0 12px;
+}
+
+.legal-section p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--text-primary);
+    margin: 10px 0;
+}
+
+.legal-section ul,
+.legal-section ol {
+    margin: 10px 0 10px 20px;
+    font-size: 16px;
+}
+
+.legal-section li {
+    margin: 5px 0;
+}
+
+.legal-divider {
+    border: none;
+    height: 1px;
+    background-color: #eee;
+    margin: 25px 0;
+}
+
+.legal-footer {
+    margin-top: 40px;
+    text-align: right;
+    color: #666;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
@@ -390,7 +458,7 @@ a:hover {
 
     .product-card {
         flex: 0 0 300px; /* 移动端卡片宽度 */
-        height: 540px;
+        height: 560px;
     }
     
     .info-list {
