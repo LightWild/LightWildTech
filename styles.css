@@ -362,33 +362,39 @@ a:hover {
 
 /* Legal / Privacy Page */
 .legal-page {
-    background-color: #ffffff;
-    padding: 40px 0 60px;
+    background-color: var(--bg-color); /* 统一全站背景色 */
+    padding: 60px 0 80px;
+    min-height: calc(100vh - 44px); /* 确保内容少时也能撑开高度 */
 }
 
 .legal-container {
-    max-width: 800px;
+    max-width: 760px; /* 收窄阅读宽度，提升单行阅读体验 */
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 60px; /* 增加内部留白 */
+    background-color: #ffffff; /* 内容区白色背景 */
+    border-radius: 24px; /* Apple风格圆角 */
+    box-shadow: 0 4px 24px rgba(0,0,0,0.04); /* 轻微阴影，增加层次感 */
 }
 
 .legal-title {
-    font-size: 28px;
-    font-weight: 600;
+    font-size: 36px; /* 增大主标题 */
+    font-weight: 700;
+    letter-spacing: -0.015em;
     color: var(--text-primary);
     text-align: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    border-bottom: none; /* 移除原来的下划线 */
+    padding-bottom: 0;
+    margin-bottom: 40px;
 }
 
 .legal-section h2 {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     color: var(--text-primary);
-    border-left: 4px solid #000;
-    padding-left: 10px;
-    margin: 30px 0 15px;
+    border-left: none; /* 移除左侧黑线，改用更现代的排版 */
+    padding-left: 0;
+    margin: 40px 0 20px;
+    letter-spacing: -0.01em;
 }
 
 .legal-section h3 {
@@ -400,32 +406,41 @@ a:hover {
 
 .legal-section p {
     font-size: 16px;
-    line-height: 1.7;
-    color: var(--text-primary);
-    margin: 10px 0;
+    line-height: 1.6; /* 优化行高 */
+    color: #333336; /* 稍微柔和的文本颜色 */
+    margin: 16px 0; /* 增加段落间距 */
+    text-align: justify; /* 两端对齐，显得更整齐 */
 }
 
 .legal-section ul,
 .legal-section ol {
-    margin: 10px 0 10px 20px;
+    margin: 16px 0 16px 24px;
     font-size: 16px;
+    color: #333336;
+    line-height: 1.6;
 }
 
 .legal-section li {
-    margin: 5px 0;
+    margin: 8px 0; /* 增加列表项间距 */
+    padding-left: 4px;
+}
+
+.legal-section ul li::marker {
+    color: #86868b; /* 自定义列表圆点颜色 */
 }
 
 .legal-divider {
     border: none;
     height: 1px;
-    background-color: #eee;
-    margin: 25px 0;
+    background-color: #e5e5ea; /* Apple风格浅灰分割线 */
+    margin: 40px 0;
 }
 
 .legal-footer {
-    margin-top: 40px;
+    margin-top: 60px;
     text-align: right;
-    color: #666;
+    color: var(--text-secondary);
+    font-size: 14px;
 }
 
 /* Responsive */
@@ -476,5 +491,30 @@ a:hover {
 
     .footer-copyright {
         text-align: center;
+    }
+    
+    /* 移动端 Legal / Privacy Page 适配 */
+    .legal-page {
+        padding: 20px 0 40px;
+    }
+    
+    .legal-container {
+        padding: 30px 20px;
+        border-radius: 0; /* 移动端取消圆角，或者保留小圆角 border-radius: 16px; 根据喜好，这里用无圆角更贴边 */
+        box-shadow: none; /* 移动端取消阴影 */
+    }
+    
+    .legal-title {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+    
+    .legal-section h2 {
+        font-size: 20px;
+        margin: 30px 0 16px;
+    }
+    
+    .legal-section p, .legal-section ul, .legal-section ol {
+        font-size: 15px; /* 移动端字号略微缩小 */
     }
 }
